@@ -3,4 +3,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="text_app_name">Centung\nMobile</string>
+    <string name="text_bangkit_capstone">Bangkit Capstone</string>
+    <string name="text_log_in">Log In</string>
+    <string name="text_sign_up">Sign Up</string>
 </resources>
