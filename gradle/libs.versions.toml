@@ -20,7 +20,6 @@ glide = "4.16.0"
 loggingInterceptor = "4.12.0"
 retrofit = "2.10.0"
 
-
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
