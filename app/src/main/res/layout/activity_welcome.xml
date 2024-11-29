@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.welcome.WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/iv_app_icon"
+        android:layout_width="200dp"
+        android:layout_height="185dp"
+        android:src="@drawable/app_icon_blue"
+        app:layout_constraintBottom_toTopOf="@+id/tv_headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_headline"
+        style="@style/Headline.Medium.Blue"
+        android:layout_width="match_parent"
+        android:text="@string/text_app_name"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_sub_headline"
+        style="@style/Sub.Headline.Semibold.Blue.1"
+        android:text="@string/text_bangkit_capstone"
+        app:layout_constraintEnd_toEndOf="@+id/tv_headline"
+        app:layout_constraintStart_toStartOf="@+id/tv_headline"
+        app:layout_constraintTop_toBottomOf="@id/tv_headline" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        style="@style/Button.Rounded.1"
+        android:backgroundTint="@color/app_blue"
+        android:text="@string/text_log_in"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sign_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_up"
+        style="@style/Button.Rounded.1"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="@color/app_green"
+        android:text="@string/text_sign_up"
+        android:textColor="@color/app_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
