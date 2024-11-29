@@ -11,5 +11,6 @@
 <!--    Theme App Color-->
     <color name="app_blue">#4A628A</color>
     <color name="app_green">#DFF2EB</color>
+    <color name="app_grey">#6C6C6C</color>
     
 </resources>
