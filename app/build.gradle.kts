@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.capstone.centung"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.capstone.centung"
