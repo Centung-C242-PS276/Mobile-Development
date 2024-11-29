@@ -18,7 +18,7 @@
     <TextView
         style="@style/Headline.Medium.White"
         android:layout_width="match_parent"
-        android:text="@string/text_app_name"
+        android:text="@string/text_app_name_spaced"
         android:textAlignment="center" />
 
     <TextView

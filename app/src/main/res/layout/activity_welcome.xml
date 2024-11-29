@@ -21,7 +21,7 @@
         android:id="@+id/tv_headline"
         style="@style/Headline.Medium.Blue"
         android:layout_width="match_parent"
-        android:text="@string/text_app_name"
+        android:text="@string/text_app_name_spaced"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
