@@ -7,6 +7,7 @@
         <item>Laki-Laki</item>
         <item>Perempuan</item>
     </string-array>
+    <string name="title_news">News</string>
     <string name="text_app_name_spaced">Centung\nMobile</string>
     <string name="text_bangkit_capstone">Bangkit Capstone</string>
     <string name="text_log_in">Log In</string>
@@ -15,4 +16,7 @@
     <string name="text_sub_headline_login">Login Your Account to start Application</string>
     <string name="text_sub_headline_register">Register Your Account to start Application</string>
     <string name="text_headline_login">Welcome to</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_profile">Profile</string>
 </resources>
