@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Centung</string>
+    <string name="app_name">Centung Mobile</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -7,4 +7,12 @@
         <item>Laki-Laki</item>
         <item>Perempuan</item>
     </string-array>
+    <string name="text_app_name_spaced">Centung\nMobile</string>
+    <string name="text_bangkit_capstone">Bangkit Capstone</string>
+    <string name="text_log_in">Log In</string>
+    <string name="text_sign_up">Sign Up</string>
+    <string name="text_desc_login_illustration">Login illustration</string>
+    <string name="text_sub_headline_login">Login Your Account to start Application</string>
+    <string name="text_sub_headline_register">Register Your Account to start Application</string>
+    <string name="text_headline_login">Welcome to</string>
 </resources>
