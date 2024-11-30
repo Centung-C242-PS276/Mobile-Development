@@ -47,7 +47,7 @@
         android:id="@+id/btn_sign_up"
         style="@style/Button.Rounded.1"
         android:layout_marginBottom="70dp"
-        android:backgroundTint="@color/app_green"
+        android:backgroundTint="@color/app_light_green"
         android:text="@string/text_sign_up"
         android:textColor="@color/app_blue"
         app:layout_constraintBottom_toBottomOf="parent"
