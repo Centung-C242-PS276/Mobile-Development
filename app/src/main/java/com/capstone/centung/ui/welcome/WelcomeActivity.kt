@@ -1,21 +1,35 @@
 package com.capstone.centung.ui.welcome
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.capstone.centung.R
+import com.capstone.centung.databinding.ActivityWelcomeBinding
+import com.capstone.centung.ui.login.LoginActivity
+import com.capstone.centung.ui.register.RegisterActivity
 
 class WelcomeActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityWelcomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_welcome)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        binding = ActivityWelcomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setupButtonActions()
+
+    }
+
+    private fun setupButtonActions() {
+        binding.apply {
+            btnLogin.setOnClickListener {
+                setupIntent(LoginActivity::class.java)
+            }
+            btnSignUp.setOnClickListener {
+                setupIntent(RegisterActivity::class.java)
+            }
         }
+    }
+
+    private fun setupIntent(destination: Class<*>) {
+        startActivity(Intent(this@WelcomeActivity, destination))
+        finish()
     }
 }
