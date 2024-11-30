@@ -1,21 +1,37 @@
 package com.capstone.centung.ui.register
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.capstone.centung.R
+import com.capstone.centung.databinding.ActivityRegisterBinding
+import com.capstone.centung.ui.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityRegisterBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_register)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setupButtonActions()
+    }
+
+    private fun setupButtonActions() {
+        binding.apply {
+            tvBtnLogin.setOnClickListener {
+                setupSignInAction()
+            }
+            btnRegister.setOnClickListener {
+                setupSignInAction()
+            }
+
         }
+    }
+
+    private fun setupSignInAction() {
+        startActivity(Intent(this@RegisterActivity, LoginActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        })
+        finish()
     }
 }
