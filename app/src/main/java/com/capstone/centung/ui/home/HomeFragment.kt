@@ -26,17 +26,10 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        // Mengatur teks menggunakan ViewModel
-        homeViewModel.text.observe(viewLifecycleOwner) { text ->
-            binding.textHome.text = text
-        }
-
-        // Handle klik tombol kalkulator
-        binding.btnKalkulator.setOnClickListener {
-            val intent = Intent(activity, KalkulatorActivity::class.java)
-            startActivity(intent)
-        }
-
+//        val textView: TextView = binding.textHome
+//        homeViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
         return root
     }
 
