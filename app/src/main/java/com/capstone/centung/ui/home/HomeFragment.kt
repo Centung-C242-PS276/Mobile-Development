@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.capstone.centung.databinding.FragmentHomeBinding
 import com.capstone.centung.ui.kalkulator.KalkulatorActivity
-
+import com.capstone.centung.databinding.FragmentHomeBinding
+import com.capstone.centung.ui.about_stunting.AboutStuntingActivity
 
 class HomeFragment : Fragment() {
 
@@ -19,23 +19,24 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
+    }
 
-        homeViewModel.text.observe(viewLifecycleOwner) { text ->
-            binding.textHome.text = text
-        }
-        binding.btnKalkulator.setOnClickListener {
-            val intent = Intent(activity, KalkulatorActivity::class.java)
-            startActivity(intent)
-        }
-        return root
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupButtonActions()
+    }
+
+    private fun setupButtonActions() {
+        binding.apply {
+            btnLearnMore.setOnClickListener {
+                startActivity(Intent(requireActivity(), AboutStuntingActivity::class.java))
+            }
+        }
     }
 
     override fun onDestroyView() {

@@ -1,37 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingBottom="80dp"
     tools:context=".ui.home.HomeFragment">
-
-    <Button
-        android:id="@+id/btn_kalkulator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="80dp"
-        android:backgroundTint="@color/purple_500"
-        android:text="Kalkulator Stunting"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="212dp"
-        tools:ignore="MissingConstraints" />
-
+  
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/text_home">
+      
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.412" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_headline_greeting"
+            style="@style/Headline.Semibold.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:text="Welcome Back !"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_headline_user_name"
+            style="@style/Headline.Semibold.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:text="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_headline_greeting" />
+
+        <LinearLayout
+            android:id="@+id/layout_check_stunting"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/img_stunting_check"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_headline_user_name">
+
+            <TextView
+                style="@style/Headline.Semibold.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36.11dp"
+                android:layout_marginTop="22.7dp"
+                android:text="Cek Stunting"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/Sub.Headline.Regular.2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="11dp"
+                android:text="&quot;Anak sehat, masa depan hebat! Mulailah dari 1.000 hari pertama kehidupan untuk memastikan si kecil tumbuh kuat dan cerdas.&quot;"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/app_green"
+                android:text="Check Now"
+                android:textAppearance="@style/Body.Light.2"
+                android:textColor="@color/white"
+                app:cornerRadius="6dp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_recommendation"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="18dp"
+            android:background="@android:color/transparent"
+            android:elevation="100dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_button_recommendation"
+            app:layout_constraintEnd_toStartOf="@id/btn_learn_more"
+            app:layout_constraintStart_toStartOf="@+id/layout_check_stunting"
+            app:layout_constraintTop_toBottomOf="@id/layout_check_stunting" />
+
+        <ImageButton
+            android:id="@+id/btn_learn_more"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_button_learn_more"
+            app:layout_constraintEnd_toEndOf="@+id/layout_check_stunting"
+            app:layout_constraintStart_toEndOf="@id/btn_recommendation"
+            app:layout_constraintTop_toTopOf="@id/btn_recommendation" />
+
+        <LinearLayout
+            android:id="@+id/iv_watch_kids_grow"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/img_watch_kids_grow"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_recommendation">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/sora_semi_bold"
+                android:text="Pantau Pertumbuhan\nAnak Kesayangan Anda !"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_chart" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
