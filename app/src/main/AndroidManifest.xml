@@ -13,10 +13,10 @@
         android:theme="@style/Theme.Centung"
         tools:targetApi="31">
         <activity
-            android:name=".RecommendationActivity"
+            android:name=".ui.kalkulator.RecommendationActivity"
             android:exported="false" />
         <activity
-            android:name=".ClassificationResultActivity"
+            android:name=".ui.kalkulator.ClassificationResultActivity"
             android:exported="false" />
         <activity
             android:name=".KalkulatorActivity"

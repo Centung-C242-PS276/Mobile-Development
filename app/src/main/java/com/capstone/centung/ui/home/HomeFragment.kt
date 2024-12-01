@@ -7,8 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.capstone.centung.KalkulatorActivity
 import com.capstone.centung.databinding.FragmentHomeBinding
+import com.capstone.centung.ui.kalkulator.KalkulatorActivity
+
 
 class HomeFragment : Fragment() {
 
@@ -26,18 +27,15 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        // Mengatur teks menggunakan ViewModel
         homeViewModel.text.observe(viewLifecycleOwner) { text ->
             binding.textHome.text = text
         }
-
-        // Handle klik tombol kalkulator
         binding.btnKalkulator.setOnClickListener {
             val intent = Intent(activity, KalkulatorActivity::class.java)
             startActivity(intent)
         }
-
         return root
+
     }
 
     override fun onDestroyView() {
