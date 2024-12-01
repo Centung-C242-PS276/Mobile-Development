@@ -7,7 +7,10 @@
     android:fillViewport="true"
     android:paddingBottom="80dp"
     tools:context=".ui.home.HomeFragment">
-
+  
+    <TextView
+        android:id="@+id/text_home">
+      
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

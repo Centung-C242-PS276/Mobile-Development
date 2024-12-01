@@ -13,7 +13,16 @@
         android:theme="@style/Theme.Centung"
         tools:targetApi="31">
         <activity
-            android:name=".ui.about_stunting.AboutStuntingActivity"
+            android:name=".ui.kalkulator.RecommendationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.kalkulator.ClassificationResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KalkulatorActivity"
+                     android:exported="false" />
+        <activity
+                  android:name=".ui.about_stunting.AboutStuntingActivity"
             android:exported="false" />
         <activity
             android:name=".ui.about_app.AboutAppActivity"
