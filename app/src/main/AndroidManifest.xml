@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Centung"
         tools:targetApi="31">
         <activity
+            android:name=".ui.kalkulator.StuntingResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.kalkulator.NormalResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.kalkulator.RecommendationActivity"
             android:exported="false" />
         <activity
@@ -20,9 +26,9 @@
             android:exported="false" />
         <activity
             android:name=".KalkulatorActivity"
-                     android:exported="false" />
+            android:exported="false" />
         <activity
-                  android:name=".ui.about_stunting.AboutStuntingActivity"
+            android:name=".ui.about_stunting.AboutStuntingActivity"
             android:exported="false" />
         <activity
             android:name=".ui.about_app.AboutAppActivity"
@@ -36,18 +42,18 @@
         <activity
             android:name=".KalkulatorActivity"
             android:exported="false" />
-         <activity
-         android:name=".ui.register.RegisterActivity"
-         android:exported="false" />
-         <activity
-         android:name=".ui.login.LoginActivity"
-         android:exported="false" />
-         <activity
-         android:name=".ui.welcome.WelcomeActivity"
-         android:exported="false" />
-         <activity
-         android:name=".ui.bottom_navbar.MainActivity"
-         android:exported="false" />
+        <activity
+            android:name=".ui.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.welcome.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.bottom_navbar.MainActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true"
@@ -61,4 +67,3 @@
     </application>
 
 </manifest>
-

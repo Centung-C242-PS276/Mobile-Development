@@ -20,7 +20,7 @@ class KalkulatorActivity : AppCompatActivity() {
         val editTextTinggi = findViewById<EditText>(R.id.editTextTinggi)
         val buttonHitung = findViewById<Button>(R.id.buttonHitung)
 
-        buttonHitung?.setOnClickListener {
+        buttonHitung.setOnClickListener {
             // Ambil input dari pengguna
             val gender = spinnerGender.selectedItem.toString()
             val usia = editTextUsia.text.toString().toIntOrNull()
@@ -35,14 +35,20 @@ class KalkulatorActivity : AppCompatActivity() {
             // Simulasi hasil klasifikasi (tanpa model)
             val result = if (tinggi < 70 && usia > 12) "STUNTING" else "NORMAL"
 
-            // Pindah ke halaman hasil klasifikasi
-            val intent = Intent(this, ClassificationResultActivity::class.java)
-            intent.putExtra("result", result)
-            intent.putExtra("gender", gender)
-            intent.putExtra("usia", usia)
-            intent.putExtra("tinggi", tinggi)
-            startActivity(intent)
+            // Pindah ke halaman hasil klasifikasi sesuai hasil
+            if (result == "STUNTING") {
+                val intent = Intent(this, StuntingResultActivity::class.java)
+                intent.putExtra("gender", gender)
+                intent.putExtra("usia", usia)
+                intent.putExtra("tinggi", tinggi)
+                startActivity(intent)
+            } else {
+                val intent = Intent(this, NormalResultActivity::class.java)
+                intent.putExtra("gender", gender)
+                intent.putExtra("usia", usia)
+                intent.putExtra("tinggi", tinggi)
+                startActivity(intent)
+            }
         }
-
     }
 }
