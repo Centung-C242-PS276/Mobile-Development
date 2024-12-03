@@ -13,7 +13,7 @@ class KalkulatorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kalkulator) // Pastikan file layout ini ada
+        setContentView(R.layout.activity_kalkulator)
 
         val spinnerGender = findViewById<Spinner>(R.id.spinnerGender)
         val editTextUsia = findViewById<EditText>(R.id.editTextUsia)
@@ -21,21 +21,14 @@ class KalkulatorActivity : AppCompatActivity() {
         val buttonHitung = findViewById<Button>(R.id.buttonHitung)
 
         buttonHitung.setOnClickListener {
-            // Ambil input dari pengguna
             val gender = spinnerGender.selectedItem.toString()
             val usia = editTextUsia.text.toString().toIntOrNull()
             val tinggi = editTextTinggi.text.toString().toFloatOrNull()
-
-            // Validasi input
             if (usia == null || tinggi == null) {
                 Toast.makeText(this, "Masukkan data yang valid", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-
-            // Simulasi hasil klasifikasi (tanpa model)
             val result = if (tinggi < 70 && usia > 12) "STUNTING" else "NORMAL"
-
-            // Pindah ke halaman hasil klasifikasi sesuai hasil
             if (result == "STUNTING") {
                 val intent = Intent(this, StuntingResultActivity::class.java)
                 intent.putExtra("gender", gender)

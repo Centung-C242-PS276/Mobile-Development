@@ -1,0 +1,64 @@
+[
+  {
+    "title": "Bukan Hanya Masalah Gizi, Infeksi Berulang Juga Picu Stunting",
+    "description": "Stunting itu disebabkan oleh tiga elemen, yaitu kurang gizi dan asupan, infeksi yang berulang, serta stimulasi psikososial yang kurang",
+    "image": "berita_1",
+    "url": "https://health.kompas.com/read/24K25220000468/bukan-hanya-masalah-gizi-infeksi-berulang-juga-picu-stunting",
+    "source": "Kompas.com",
+    "publishedAt": "2024-11-25"
+  },
+
+  {
+    "title": "Konsumsi Makanan Bergizi Seimbang Jadi Kunci Lawan Stunting",
+    "description": "Salah satu cara melawan stunting adalah dengan mengonsumsi makanan bergizi seimbang, yaitu makanan beraneka ragam dengan proporsi yang seimbang, seperti dalam Isi Piringku",
+    "image": "berita_2",
+    "url": "https://biz.kompas.com/read/2024/08/22/200134728/konsumsi-makanan-bergizi-seimbang-jadi-kunci-lawan-stunting",
+    "source": "Kompas.com",
+    "publishedAt": "2024-12-01"
+  },
+
+  {
+    "title": "Deteksi Stunting Menggunakan Program OSS-R Shiny Berbasis Android",
+    "description": "stunting masih menjadi salah satu permasalahan serius di Indonesia.",
+    "image": "berita_3",
+    "url": "https://news.detik.com/kolom/d-7657399/deteksi-stunting-menggunakan-program-oss-r-shiny-berbasis-android",
+    "source": "detiknews",
+    "publishedAt": "2024-11-06"
+  },
+
+  {
+    "title": "Upaya Mencegah Stunting Balita Indonesia",
+    "description": "Pemerintah terus melakukan berbagai hal itu menekan angka stunting. Salah satunya adalah pengukuran tinggi serta lingkar kepala balita di seluruh Indonesia.",
+    "image": "berita_4",
+    "url": "https://health.detik.com/fotohealth/d-7643792/upaya-mencegah-stunting-balita-indonesia",
+    "source": "detikHealth",
+    "publishedAt": "2024-11-18"
+  },
+
+  {
+    "title": "Cegah Stunting, Orang Tua Jangan Lengah Cek Tinggi Bayi",
+    "description": "Semua anak stunting dipastikan memiliki badan pendek, sehingga pemantauan tinggi dan berat badan perlu dilakukan tenaga medis.",
+    "image": "berita_5",
+    "url": "https://www.tempo.co/gaya-hidup/cegah-stunting-orang-tua-jangan-lengah-cek-tinggi-bayi-1161311",
+    "source": "TEMPO.CO",
+    "publishedAt": "2024-10-29"
+  },
+
+  {
+    "title": "Sanitasi dan Akses Air Bersih Kunci Utama Cegah Stunting",
+    "description": "Kualitas air minum yang buruk serta sanitasi yang jelek di lingkungan keluarga meningkatkan risiko stunting hampir 1,5 kali.",
+    "image": "berita_6",
+    "url": "https://www.tempo.co/gaya-hidup/sanitasi-dan-akses-air-bersih-kunci-utama-cegah-stunting-1062112",
+    "source": "TEMPO.CO",
+    "publishedAt": "2024-09-25"
+  },
+
+  {
+    "title": "6 Pola Asuh Kesehatan untuk Cegah Anak Stunting",
+    "description": "Berikut enam pola asuh kesehatan pada anak yang perlu dipahami orang tua untuk mencegah anak stunting.",
+    "image": "berita_7",
+    "url": "https://www.tempo.co/gaya-hidup/6-pola-asuh-kesehatan-untuk-cegah-anak-stunting-13407",
+    "source": "TEMPO.CO",
+    "publishedAt": "2024-09-02"
+  }
+]

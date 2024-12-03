@@ -18,15 +18,12 @@ class StuntingResultActivity : AppCompatActivity() {
         val buttonSolusi = findViewById<Button>(R.id.buttonSolusi)
         val buttonBack = findViewById<Button>(R.id.buttonBack)
         val imageViewCenter = findViewById<ImageView>(R.id.imageViewCenter)
-        imageViewCenter.setImageResource(R.drawable.doctor) // Gambar untuk stunting
+        imageViewCenter.setImageResource(R.drawable.doctor)
 
-
-        // Ambil data dari intent
         val gender = intent.getStringExtra("gender")
         val usia = intent.getIntExtra("usia", 0)
         val tinggi = intent.getFloatExtra("tinggi", 0f)
 
-        // Tampilkan detail hasil klasifikasi
         textViewDetails.text = """
             Berdasarkan:
             Jenis Kelamin: $gender
@@ -34,13 +31,11 @@ class StuntingResultActivity : AppCompatActivity() {
             Usia: $usia bulan
         """.trimIndent()
 
-        // Tombol solusi
         buttonSolusi.setOnClickListener {
             val intent = Intent(this, RecommendationActivity::class.java)
             startActivity(intent)
         }
 
-        // Tombol kembali
         buttonBack.setOnClickListener {
             finish()
         }

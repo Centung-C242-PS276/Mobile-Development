@@ -14,28 +14,24 @@ class ClassificationResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_classification_result)
 
-        // Tombol kembali di toolbar
         val buttonBackToolbar = findViewById<ImageView>(R.id.buttonBackToolbar)
         buttonBackToolbar.setOnClickListener {
-            onBackPressed() // Kembali ke halaman sebelumnya
+            onBackPressed()
         }
 
-        // Inisialisasi elemen UI lainnya
-        val textViewResultTop = findViewById<TextView>(R.id.textViewResultTop) // TextView untuk hasil klasifikasi
-        val textViewDetails = findViewById<TextView>(R.id.textViewDetails) // TextView untuk detail data
+        val textViewResultTop = findViewById<TextView>(R.id.textViewResultTop)
+        val textViewDetails = findViewById<TextView>(R.id.textViewDetails)
         val buttonSolusi = findViewById<Button>(R.id.buttonSolusi)
         val buttonBack = findViewById<Button>(R.id.buttonBack)
 
-        // Ambil data dari intent
+
         val result = intent.getStringExtra("result")
         val gender = intent.getStringExtra("gender")
         val usia = intent.getIntExtra("usia", 0)
         val tinggi = intent.getFloatExtra("tinggi", 0f)
 
-        // Tampilkan hasil klasifikasi di atas
         textViewResultTop.text = "Hasil Klasifikasi: $result"
 
-        // Tampilkan detail data di bawah hasil klasifikasi
         textViewDetails.text = """
             Berdasarkan:
             Jenis Kelamin: $gender
@@ -43,14 +39,12 @@ class ClassificationResultActivity : AppCompatActivity() {
             Usia: $usia bulan
         """.trimIndent()
 
-        // Tombol solusi
         buttonSolusi.setOnClickListener {
             val intent = Intent(this, RecommendationActivity::class.java)
             intent.putExtra("result", result)
             startActivity(intent)
         }
 
-        // Tombol kembali
         buttonBack.setOnClickListener {
             finish()
         }
