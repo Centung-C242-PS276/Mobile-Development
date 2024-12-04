@@ -4,8 +4,9 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string-array name="gender_array">
-        <item>Laki-Laki</item>
-        <item>Perempuan</item>
+        <item>Pilih Jenis Kelamin</item>
+        <item>laki-laki</item>
+        <item>perempuan</item>
     </string-array>
     <string name="title_news">News</string>
     <string name="text_app_name_spaced">Centung\nMobile</string>

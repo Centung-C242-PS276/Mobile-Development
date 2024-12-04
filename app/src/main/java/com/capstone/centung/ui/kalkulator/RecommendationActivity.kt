@@ -17,10 +17,11 @@ class RecommendationActivity : AppCompatActivity() {
         val buttonBack = findViewById<Button>(R.id.buttonBack)
 
         solutionText.text = """
-            Solusi untuk "Stunting":
-            1. Tambahkan makanan bergizi.
-            2. Penuhi asupan vitamin.
-            3. Rutin kontrol ke dokter.
+            Rekomendasi Solusi Penanganan Stunting:
+            1. Pastikan anak mendapatkan asupan gizi yang cukup, termasuk protein, zat besi, dan vitamin.
+            2. Jadwalkan kunjungan ke dokter atau ahli gizi untuk memantau perkembangan anak.
+            3. Berikan imunisasi yang lengkap sesuai usia.
+            4. Ciptakan lingkungan yang bersih untuk mengurangi risiko infeksi.
         """.trimIndent()
 
         buttonBack.setOnClickListener {
