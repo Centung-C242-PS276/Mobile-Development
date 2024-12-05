@@ -28,16 +28,16 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupButtonActions()
+//        setupButtonActions()
     }
 
-    private fun setupButtonActions() {
-        binding.apply {
-            btnLearnMore.setOnClickListener {
-                startActivity(Intent(requireActivity(), AboutStuntingActivity::class.java))
-            }
-        }
-    }
+//    private fun setupButtonActions() {
+//        binding.apply {
+//            btnLearnMore.setOnClickListener {
+//                startActivity(Intent(requireActivity(), AboutStuntingActivity::class.java))
+//            }
+//        }
+//    }
 
     override fun onDestroyView() {
         super.onDestroyView()
