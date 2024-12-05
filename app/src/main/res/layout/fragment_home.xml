@@ -5,11 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:paddingBottom="80dp"
-    tools:context=".ui.home.HomeFragment">
 
-<!--    <TextView-->
-<!--        android:id="@+id/text_home">-->
+    tools:context=".ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -22,122 +19,238 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="20dp"
-            android:text="Welcome Back !"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Welcome Back"
+            android:textColor="@color/app_grey"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/iv_user"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_headline_user_name"
-            style="@style/Headline.Semibold.Black"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
+            android:fontFamily="@font/poppins_bold"
             android:text="@string/app_name"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/iv_user"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_headline_greeting" />
 
-        <LinearLayout
-            android:id="@+id/layout_check_stunting"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_headline_user_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_headline_greeting"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_check_stunting"
             android:layout_width="0dp"
-            android:layout_height="220dp"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="18dp"
-            android:background="@drawable/img_stunting_check"
-            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="17dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_headline_user_name">
+            app:layout_constraintTop_toBottomOf="@id/tv_headline_user_name"
+            app:strokeColor="@color/app_blue"
+            app:strokeWidth="2dp">
 
-            <TextView
-                style="@style/Headline.Semibold.Black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36.11dp"
-                android:layout_marginTop="22.7dp"
-                android:text="Cek Stunting"
-                android:textSize="14sp" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                style="@style/Sub.Headline.Regular.2"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="11dp"
-                android:text="&quot;Anak sehat, masa depan hebat! Mulailah dari 1.000 hari pertama kehidupan untuk memastikan si kecil tumbuh kuat dan cerdas.&quot;"
-                android:textColor="@color/black"
-                android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/tv_headline_check_stunting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="23dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Cek Stunting"
+                    android:textColor="@color/app_blue"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/app_green"
-                android:text="Check Now"
-                android:textAppearance="@style/Body.Light.2"
-                android:textColor="@color/white"
-                app:cornerRadius="6dp" />
+                <TextView
+                    android:id="@+id/tv_desc_stunting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="&quot;Anak sehat, masa depan hebat! Mulailah dari 1.000 hari pertama kehidupan untuk memastikan si kecil tumbuh kuat dan cerdas.&quot;"
+                    app:layout_constraintEnd_toEndOf="@id/tv_headline_check_stunting"
+                    app:layout_constraintStart_toStartOf="@id/tv_headline_check_stunting"
+                    app:layout_constraintTop_toBottomOf="@id/tv_headline_check_stunting" />
 
-        </LinearLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Check Now !"
+                    android:textSize="14sp"
+                    app:backgroundTint="@color/app_blue"
+                    app:cornerRadius="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_desc_stunting"
+                    app:layout_constraintTop_toBottomOf="@id/tv_desc_stunting" />
 
-        <ImageButton
-            android:id="@+id/btn_recommendation"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="18dp"
-            android:background="@android:color/transparent"
-            android:elevation="100dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/img_button_recommendation"
-            app:layout_constraintEnd_toStartOf="@id/btn_learn_more"
-            app:layout_constraintStart_toStartOf="@+id/layout_check_stunting"
-            app:layout_constraintTop_toBottomOf="@id/layout_check_stunting" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_child_with_parent_rocket"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_headline_check_stunting"
+                    app:layout_constraintTop_toTopOf="@id/tv_headline_check_stunting" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageButton
-            android:id="@+id/btn_learn_more"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:background="@android:color/transparent"
-            android:scaleType="centerInside"
-            android:src="@drawable/img_button_learn_more"
-            app:layout_constraintEnd_toEndOf="@+id/layout_check_stunting"
-            app:layout_constraintStart_toEndOf="@id/btn_recommendation"
-            app:layout_constraintTop_toTopOf="@id/btn_recommendation" />
+        </com.google.android.material.card.MaterialCardView>
 
         <LinearLayout
-            android:id="@+id/iv_watch_kids_grow"
-            android:layout_width="0dp"
-            android:layout_height="175dp"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="18dp"
-            android:background="@drawable/img_watch_kids_grow"
+            android:id="@+id/card_recommendation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
             android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_recommendation">
+            app:layout_constraintStart_toStartOf="@+id/card_check_stunting"
+            app:layout_constraintTop_toBottomOf="@id/card_check_stunting">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/app_blue"
+                app:cardCornerRadius="15dp"
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:layout_width="145dp"
+                    android:layout_height="145dp"
+                    android:src="@drawable/img_person_puzzle" />
+
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="28dp"
-                android:fontFamily="@font/sora_semi_bold"
-                android:text="Pantau Pertumbuhan\nAnak Kesayangan Anda !"
-                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/sora_bold"
+                android:text="Rekomendasi\n Penanganan"
+                android:textAlignment="center"
+                android:textColor="@color/app_blue"
                 android:textSize="16sp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="68dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_chart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_learn_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/card_check_stunting"
+            app:layout_constraintTop_toBottomOf="@+id/card_check_stunting">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/app_blue"
+                app:cardCornerRadius="15dp"
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:layout_width="145dp"
+                    android:layout_height="145dp"
+                    android:src="@drawable/img_person_book" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/sora_bold"
+                android:text="Belajar Tentang\n Stunting"
+                android:textAlignment="center"
+                android:textColor="@color/app_blue"
+                android:textSize="16sp" />
 
         </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_chart_grow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="55dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_recommendation"
+            app:strokeColor="@color/app_blue"
+            app:strokeWidth="2dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_charts"
+                    android:layout_width="140dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:src="@drawable/img_person_charts"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_watch_kids_grow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="9dp"
+                    android:fontFamily="@font/sora_bold"
+                    android:text="Pantau\nPertumbuhan Anak\nKesayangan Anda !"
+                    android:textColor="@color/app_blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_charts"
+                    app:layout_constraintTop_toTopOf="@id/iv_charts" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Catat Pertumbuhan !"
+                    android:textSize="12sp"
+                    app:backgroundTint="@color/app_blue"
+                    app:cornerRadius="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_watch_kids_grow"
+                    app:layout_constraintStart_toStartOf="@+id/tv_watch_kids_grow"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_watch_kids_grow" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
