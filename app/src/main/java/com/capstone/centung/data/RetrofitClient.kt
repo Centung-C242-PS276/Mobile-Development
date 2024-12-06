@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
-    private const val BASE_URL = "https://coba-flask-974124423355.asia-southeast1.run.app/"
+    private const val BASE_URL = "https://api-model-ml-343378515387.asia-southeast2.run.app/"
 
     val client = OkHttpClient.Builder()
         .connectTimeout(30, TimeUnit.SECONDS)
