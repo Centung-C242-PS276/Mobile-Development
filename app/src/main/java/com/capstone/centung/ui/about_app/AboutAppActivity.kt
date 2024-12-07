@@ -12,22 +12,17 @@ class AboutAppActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAboutAppBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setupDesc()
         setupActionBackToolBar()
+        setupDesc()
 
     }
 
     private fun setupDesc() {
-        val formattedDesc = """
-                Our project aims to develop an innovative app that predicts a child’s risk of stunting by analyzing key health indicators. 
-                The tool is designed to empower caregivers and health professionals by providing early warnings and tailored interventions. 
-                The research underlying the app focuses on identifying the most significant determinants of health and shows how early risk 
-                detection can facilitate impactful preventive actions.
-
-                Through real-time analysis and personalized recommendations, the app supports families and health providers in addressing 
-                the root causes of stunting. Our initiative aligns with the national strategy to reduce stunting prevalence, offering accessible 
-                and effective educational resources to promote healthier communities.
-            """.trimIndent()
+            val formattedDesc = """
+Centung is an innovative digital solution designed to predict and address the risk of stunting in children. By leveraging key health indicators such as nutritional intake, parental health history, and environmental factors, Centung empowers caregivers and healthcare professionals with real-time insights into a child's growth and development.
+The application utilizes advanced machine learning algorithms to analyze data and assess stunting risk levels, providing personalized recommendations to prevent and mitigate the condition. Through an intuitive interface, Centung delivers actionable guidance, health education, and progress tracki=ng to ensure timely interventions.
+By focusing on early detection and prevention, Centung aims to become a vital tool in combating stunting, supporting Indonesia’s efforts to improve child health outcomes and nurture a healthier, brighter future for its next generation.
+                """.trimIndent()
         binding.tvDesc.text = formattedDesc
     }
 
@@ -37,9 +32,10 @@ class AboutAppActivity : AppCompatActivity() {
             mToolbar.apply {
                 setNavigationIcon(R.drawable.ic_arrow_back)
                 setNavigationOnClickListener {
-                    onBackPressedDispatcher.onBackPressed()
+                    finish()
                 }
             }
         }
     }
+
 }

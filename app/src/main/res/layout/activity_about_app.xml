@@ -22,8 +22,10 @@
         android:id="@+id/tv_desc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/league_spartan_extra_light"
+        android:textColor="@color/black"
+        android:fontFamily="@font/league_spartan_regular"
         android:padding="30dp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/mToolbar" />
