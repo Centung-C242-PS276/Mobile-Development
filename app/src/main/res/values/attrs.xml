@@ -5,4 +5,14 @@
         <attr name="hintText" format="string" />
         <attr name="isPasswordTypeInput" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="CustomItemProfile">
+        <attr name="addImg" format="reference" />
+        <attr name="addText" format="string" />
+        <attr name="dividerVisibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+    </declare-styleable>
 </resources>
