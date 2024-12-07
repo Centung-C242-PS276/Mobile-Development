@@ -28,7 +28,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Ariel Peterpan"
+            android:text="@string/app_name"
             android:textAlignment="center"
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +76,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <com.capstone.centung.utils.components.CustomItemProfile
-                    android:id="@+id/btn_about_us"
+                    android:id="@+id/btn_rating_us"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:addImg="@drawable/ic_star_rating"
@@ -89,9 +89,10 @@
                     android:layout_height="wrap_content"
                     app:addImg="@drawable/ic_contact"
                     app:addText="Contact Us"
-                    app:layout_constraintTop_toBottomOf="@id/btn_about_us" />
+                    app:layout_constraintTop_toBottomOf="@id/btn_rating_us" />
 
                 <com.capstone.centung.utils.components.CustomItemProfile
+                    android:id="@+id/btn_logout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:addImg="@drawable/ic_logout"
