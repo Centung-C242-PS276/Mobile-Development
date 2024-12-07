@@ -2,13 +2,16 @@ package com.capstone.centung.utils.components
 
 import android.content.Context
 import android.graphics.drawable.Drawable
+import android.os.Build
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
+import androidx.annotation.RequiresApi
 import androidx.core.content.res.use
 import com.capstone.centung.R
 import com.capstone.centung.databinding.CustomItemProfileBinding
 
+@RequiresApi(Build.VERSION_CODES.M)
 class CustomItemProfile @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -28,6 +31,13 @@ class CustomItemProfile @JvmOverloads constructor(
 
                 val text: String? = typedArray.getString(R.styleable.CustomItemProfile_addText)
                 binding.tvAddText.text = text
+
+
+                val textColor = typedArray.getColor(
+                    R.styleable.CustomItemProfile_addTextColor,
+                    context.getColor(R.color.black)
+                )
+                binding.tvAddText.setTextColor(textColor)
 
                 val visibility = typedArray.getInt(
                     R.styleable.CustomItemProfile_dividerVisibility,

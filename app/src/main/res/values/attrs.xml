@@ -14,5 +14,6 @@
             <enum name="invisible" value="1" />
             <enum name="gone" value="2" />
         </attr>
+        <attr name="addTextColor" format="color" />
     </declare-styleable>
 </resources>

@@ -95,6 +95,7 @@
                     android:id="@+id/btn_logout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:addTextColor="#FF0000"
                     app:addImg="@drawable/ic_logout"
                     app:addText="Logout"
                     app:dividerVisibility="invisible"
