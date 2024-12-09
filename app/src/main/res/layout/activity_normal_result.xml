@@ -38,6 +38,18 @@
         android:gravity="center"
         android:layout_marginBottom="16dp" />
 
+    <Button
+        android:id="@+id/btnGoToDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:text="Lihat Dashboard"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:layout_marginHorizontal="50dp"/>
+
     <!-- Tombol Kembali -->
     <Button
         android:id="@+id/buttonBack"

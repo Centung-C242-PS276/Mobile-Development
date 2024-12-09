@@ -3,8 +3,10 @@ package com.capstone.centung.ui.kalkulator
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +28,7 @@ class KalkulatorActivity : AppCompatActivity() {
         val editTextUsia = findViewById<EditText>(R.id.editTextUsia)
         val editTextTinggi = findViewById<EditText>(R.id.editTextTinggi)
         val buttonHitung = findViewById<Button>(R.id.buttonHitung)
+        val progressBar = findViewById<ProgressBar>(R.id.progressBar)
 
         buttonHitung.setOnClickListener {
             val gender = spinnerGender.selectedItem.toString().lowercase()
@@ -52,6 +55,9 @@ class KalkulatorActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            // Tampilkan ProgressBar
+            progressBar.visibility = View.VISIBLE
+
             // Log untuk debug
             Log.d("API_REQUEST", "Jenis kelamin: $gender, Usia: $usia, Tinggi: $tinggi")
 
@@ -67,6 +73,10 @@ class KalkulatorActivity : AppCompatActivity() {
                         call: Call<StuntingResponse>,
                         response: Response<StuntingResponse>
                     ) {
+
+                        // Sembunyikan ProgressBar
+                        progressBar.visibility = View.GONE
+
                         if (response.isSuccessful) {
                             val result = response.body()?.predictedClass
 

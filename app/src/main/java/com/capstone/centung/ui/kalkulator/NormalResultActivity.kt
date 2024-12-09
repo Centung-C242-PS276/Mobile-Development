@@ -1,11 +1,13 @@
 package com.capstone.centung.ui.kalkulator
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.centung.R
+import com.capstone.centung.ui.DashboardPemantauan.DashboardActivity
 
 class NormalResultActivity : AppCompatActivity() {
 
@@ -36,6 +38,22 @@ class NormalResultActivity : AppCompatActivity() {
 
         buttonBack.setOnClickListener {
             finish()
+        }
+
+
+        val btnGoToDashboard = findViewById<Button>(R.id.btnGoToDashboard)
+
+        // Set klik listener untuk tombol
+        btnGoToDashboard.setOnClickListener {
+            // Buat Intent untuk berpindah ke DashboardActivity
+            val intent = Intent(this, DashboardActivity::class.java)
+
+            // Opsional: Kirim data ke DashboardActivity (misalnya, hasil prediksi)
+            intent.putExtra("predictionResult", "NORMAL") // Ganti "NORMAL" sesuai kebutuhan
+
+            // Jalankan Activity
+            startActivity(intent)
+
         }
     }
 }

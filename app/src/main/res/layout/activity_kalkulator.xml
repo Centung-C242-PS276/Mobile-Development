@@ -1,84 +1,99 @@
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <!-- ProgressBar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/calculator"
-            android:contentDescription="Logo Aplikasi"
-            android:layout_marginBottom="16dp" />
+    <!-- ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Prediksi Stunting"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginBottom="24dp" />
-
-        <TextView
-            android:id="@+id/labelGender"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jenis Kelamin"
-            android:textSize="16sp"
-            android:layout_marginBottom="4dp" />
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
-        <Spinner
-            android:id="@+id/spinnerGender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/gender_array"
-            android:spinnerMode="dropdown" />
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/calculator"
+                android:contentDescription="Logo Aplikasi"
+                android:layout_marginBottom="16dp" />
 
-        <TextView
-            android:id="@+id/labelUsia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Usia (dalam bulan)"
-            android:textSize="16sp"
-            android:layout_marginBottom="4dp" />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prediksi Stunting"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
 
-        <EditText
-            android:id="@+id/editTextUsia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Masukkan usia"
-            android:inputType="number"
-            android:layout_marginBottom="16dp" />
+            <TextView
+                android:id="@+id/labelGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kelamin"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp" />
 
-        <TextView
-            android:id="@+id/labelTinggi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tinggi Badan (cm)"
-            android:textSize="16sp"
-            android:layout_marginBottom="4dp" />
+            <Spinner
+                android:id="@+id/spinnerGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/gender_array"
+                android:spinnerMode="dropdown" />
 
-        <EditText
-            android:id="@+id/editTextTinggi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Masukkan tinggi badan"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="24dp" />
+            <TextView
+                android:id="@+id/labelUsia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Usia (dalam bulan)"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp" />
 
-        <Button
-            android:id="@+id/buttonHitung"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hitung" />
-    </LinearLayout>
-</ScrollView>
+            <EditText
+                android:id="@+id/editTextUsia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan usia"
+                android:inputType="number"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/labelTinggi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tinggi Badan (cm)"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/editTextTinggi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan tinggi badan"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/buttonHitung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hitung" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
