@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Centung"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.DashboardPemantauan.DashboardActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.first.FirstActivity"
             android:exported="false" />
@@ -28,25 +34,13 @@
             android:name=".ui.kalkulator.RecommendationActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.kalkulator.ClassificationResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".KalkulatorActivity"
+            android:name=".ui.kalkulator.KalkulatorActivity"
             android:exported="false" />
         <activity
             android:name=".ui.about_stunting.AboutStuntingActivity"
             android:exported="false" />
         <activity
             android:name=".ui.about_app.AboutAppActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RecommendationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ClassificationResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".KalkulatorActivity"
             android:exported="false" />
         <activity
             android:name=".ui.register.RegisterActivity"

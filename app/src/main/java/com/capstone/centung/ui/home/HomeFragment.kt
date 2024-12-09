@@ -28,15 +28,26 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        setupButtonActions()
+
+        // Tambahkan aksi pada tombol
+        binding.btnCheckNow.setOnClickListener {
+            // Pindah ke KalkulatorActivity
+            val intent = Intent(requireContext(), KalkulatorActivity::class.java)
+            startActivity(intent)
+        }
     }
 
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//        setupButtonActions()
+//    }
+//
 //    private fun setupButtonActions() {
 //        binding.apply {
 //            btnLearnMore.setOnClickListener {
 //                startActivity(Intent(requireActivity(), AboutStuntingActivity::class.java))
 //            }
-//        }
+//       }
 //    }
 
     override fun onDestroyView() {
