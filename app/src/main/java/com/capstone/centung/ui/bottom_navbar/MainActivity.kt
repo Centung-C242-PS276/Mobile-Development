@@ -3,6 +3,7 @@ package com.capstone.centung.ui.bottom_navbar
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
@@ -33,5 +34,18 @@ class MainActivity : AppCompatActivity() {
             )
         )
         navView.setupWithNavController(navController)
+
+        // Periksa apakah ada permintaan navigasi
+        handleNavigationIntent(navController)
+
     }
+
+    private fun handleNavigationIntent(navController: NavController) {
+        val destination = intent.getStringExtra("navigateTo")
+        if (destination == "home") {
+            // Arahkan ke HomeFragment
+            navController.navigate(R.id.navigation_home)
+        }
+    }
+
 }
