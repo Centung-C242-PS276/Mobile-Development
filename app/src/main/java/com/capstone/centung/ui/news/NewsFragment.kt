@@ -34,23 +34,23 @@ class NewsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_news, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Temukan RecyclerView dan atur layout manager
+
         val recyclerView = view.findViewById<RecyclerView>(R.id.rvNews)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        // Load data dari JSON atau sumber lainnya
+
         val newsList = loadNewsFromJson(requireContext())
         adapter = NewsAdapter(newsList)
         recyclerView.adapter = adapter
 
-        // Temukan TextView dan atur teksnya
+
         val pageTitle = view.findViewById<TextView>(R.id.tvPageTitle)
         pageTitle.text = "Berita Terkait Stunting"
     }

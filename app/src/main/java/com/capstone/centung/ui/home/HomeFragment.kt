@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.centung.ui.kalkulator.KalkulatorActivity
 import com.capstone.centung.databinding.FragmentHomeBinding
+import com.capstone.centung.ui.DashboardPemantauan.DashboardActivity
 import com.capstone.centung.ui.about_stunting.AboutStuntingActivity
+import com.capstone.centung.ui.kalkulator.RecommendationActivity
 
 class HomeFragment : Fragment() {
 
@@ -30,27 +32,27 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Tambahkan aksi pada tombol
         binding.btnCheckNow.setOnClickListener {
-            // Pindah ke KalkulatorActivity
             val intent = Intent(requireContext(), KalkulatorActivity::class.java)
             startActivity(intent)
         }
+
+
+        binding.cardAboutStunting.setOnClickListener {
+            val intent = Intent(requireContext(), AboutStuntingActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.pertumbuhan.setOnClickListener {
+            val intent = Intent(requireContext(), DashboardActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.rekomendasi.setOnClickListener {
+            val intent = Intent(requireContext(), RecommendationActivity::class.java)
+            startActivity(intent)
+        }
     }
-
-
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//        setupButtonActions()
-//    }
-//
-//    private fun setupButtonActions() {
-//        binding.apply {
-//            btnLearnMore.setOnClickListener {
-//                startActivity(Intent(requireActivity(), AboutStuntingActivity::class.java))
-//            }
-//       }
-//    }
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Judul -->
         <TextView
             android:id="@+id/titleDashboard"
             android:layout_width="match_parent"
@@ -22,7 +21,6 @@
             android:paddingBottom="16dp"
             android:textColor="@color/black" />
 
-        <!-- Status Terkini -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,7 +30,6 @@
             android:layout_marginBottom="16dp"
             android:gravity="center_vertical">
 
-            <!-- Status Hasil Klasifikasi -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -63,7 +60,6 @@
                     android:textColor="@color/white" />
             </LinearLayout>
 
-            <!-- Gambar Anak -->
             <ImageView
                 android:id="@+id/childImage"
                 android:layout_width="120dp"
@@ -73,7 +69,6 @@
                 android:layout_gravity="center" />
         </LinearLayout>
 
-        <!-- Grafik Pertumbuhan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,7 +85,6 @@
             android:src="@drawable/dummy_chart"
             android:scaleType="fitCenter" />
 
-        <!-- Catatan Pertumbuhan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -110,7 +104,6 @@
             android:padding="16dp"
             android:layout_marginBottom="16dp">
 
-            <!-- Catatan 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -123,7 +116,6 @@
                     android:orientation="horizontal"
                     android:paddingBottom="8dp">
 
-                    <!-- Gambar Nomor -->
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -131,7 +123,6 @@
                         android:src="@drawable/placeholder_note1"
                         android:layout_marginEnd="8dp" />
 
-                    <!-- Teks Deskripsi -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -154,14 +145,12 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Garis Pembatas -->
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/black" />
             </LinearLayout>
 
-            <!-- Catatan 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -174,7 +163,6 @@
                     android:orientation="horizontal"
                     android:paddingBottom="8dp">
 
-                    <!-- Gambar Nomor -->
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -182,7 +170,6 @@
                         android:src="@drawable/placeholder_note2"
                         android:layout_marginEnd="8dp" />
 
-                    <!-- Teks Deskripsi -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -205,13 +192,11 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Garis Pembatas -->
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/black" />
 
-                <!-- Catatan 3 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -223,7 +208,6 @@
                         android:orientation="horizontal"
                         android:paddingBottom="8dp">
 
-                        <!-- Gambar Nomor -->
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
@@ -231,7 +215,6 @@
                             android:src="@drawable/placeholder_note3"
                             android:layout_marginEnd="8dp" />
 
-                        <!-- Teks Deskripsi -->
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -254,7 +237,6 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <!-- Garis Pembatas -->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"

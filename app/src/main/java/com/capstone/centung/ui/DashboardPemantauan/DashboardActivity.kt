@@ -17,11 +17,9 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
-        // Komponen layout
         val statusText = findViewById<TextView>(R.id.currentStatus)
         val growthChart = findViewById<ImageView>(R.id.growthChart)
 
-        // Set status anak
         val predictionResult = intent.getStringExtra("predictionResult") ?: "NORMAL"
         statusText.text = predictionResult
         if (predictionResult == "STUNTING") {

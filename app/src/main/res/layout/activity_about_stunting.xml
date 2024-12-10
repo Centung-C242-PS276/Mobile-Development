@@ -1,33 +1,190 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.about_stunting.AboutStuntingActivity">
+    android:padding="16dp"
+    android:background="@color/white">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/mToolbar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="Apa Itu Stunting ?"
-        app:titleCentered="true"
-        app:titleTextAppearance="@style/Headline.Toolbar" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_desc"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/about_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
 
-        android:fontFamily="@font/league_spartan"
-        android:textSize="14sp"
-        android:padding="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mToolbar" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/doctor_image"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Gambar Dokter" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apa Itu Stunting?"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stunting adalah kondisi gangguan pertumbuhan pada anak yang disebabkan oleh kekurangan gizi kronis, terutama selama 1.000 hari pertama kehidupan, yaitu dari masa kehamilan hingga anak berusia dua tahun. Anak yang mengalami stunting memiliki tinggi badan yang lebih rendah dari standar usianya, tetapi masalah ini bukan hanya soal fisik."
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/about_background"
+            android:layout_marginBottom="16dp"
+            android:padding="16dp">
+
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/child_image"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Gambar Anak" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dampak Stunting:"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. Kognitif: Menghambat perkembangan otak, yang dapat memengaruhi kemampuan belajar dan produktivitas di masa depan.\n\n2. Kesehatan: Anak lebih rentan terhadap penyakit dan gangguan metabolisme saat dewasa.\n\n3. Psikososial: Dapat mengurangi kepercayaan diri dan kualitas hidup."
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/about_background"
+            android:layout_marginBottom="16dp"
+            android:padding="16dp">
+
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/child_image2"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Gambar Anak" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Penyebab utama stunting:"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. Kekurangan gizi selama masa kehamilan dan balita.\n\n2.Praktik pemberian makan yang tidak memadai.\n\n3. Sanitasi dan akses air bersih yang buruk. \n\n4. Kurangnya edukasi ibu mengenai pola asuh dan gizi."
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/about_background"
+            android:layout_marginBottom="16dp"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/child_image3"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Gambar Anak" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kapan Anak dikatakan Stunting ?"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anak dikatakan mengalami stunting apabila tinggi badannya lebih rendah dari standar tinggi badan anak seusianya menurut standar pertumbuhan anak dari WHO (World Health Organization)."
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kembali Ke Home"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</ScrollView>

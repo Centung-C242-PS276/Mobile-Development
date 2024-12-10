@@ -34,8 +34,6 @@ class MainActivity : AppCompatActivity() {
             )
         )
         navView.setupWithNavController(navController)
-
-        // Periksa apakah ada permintaan navigasi
         handleNavigationIntent(navController)
 
     }
@@ -43,7 +41,6 @@ class MainActivity : AppCompatActivity() {
     private fun handleNavigationIntent(navController: NavController) {
         val destination = intent.getStringExtra("navigateTo")
         if (destination == "home") {
-            // Arahkan ke HomeFragment
             navController.navigate(R.id.navigation_home)
         }
     }

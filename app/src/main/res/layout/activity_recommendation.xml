@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Judul -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,7 +19,6 @@
             android:gravity="center"
             android:layout_marginBottom="16dp" />
 
-        <!-- Deskripsi -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,7 +27,6 @@
             android:gravity="center"
             android:layout_marginBottom="16dp" />
 
-        <!-- Daftar Solusi -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,7 +34,6 @@
             android:divider="@android:drawable/divider_horizontal_bright"
             android:showDividers="middle">
 
-            <!-- Solusi 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -66,7 +62,6 @@
                     android:gravity="center" />
             </LinearLayout>
 
-            <!-- Solusi 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -124,7 +119,6 @@
                     android:gravity="center" />
             </LinearLayout>
 
-            <!-- Solusi 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -181,7 +175,6 @@
                     android:gravity="center" />
             </LinearLayout>
 
-            <!-- Solusi 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -239,7 +232,6 @@
                     android:gravity="center" />
             </LinearLayout>
 
-            <!-- Solusi 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -297,7 +289,6 @@
                     android:gravity="center" />
             </LinearLayout>
 
-            <!-- Solusi 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -355,7 +346,6 @@
                     android:gravity="center" />
             </LinearLayout>
 
-            <!-- Solusi 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -384,7 +374,6 @@
                     android:gravity="center" />
             </LinearLayout>
 
-            <!-- Tambahkan solusi tambahan lainnya sesuai kebutuhan -->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -416,7 +405,6 @@
 
         </LinearLayout>
 
-        <!-- Tombol Kembali -->
         <Button
             android:id="@+id/buttonBack"
             android:layout_width="match_parent"

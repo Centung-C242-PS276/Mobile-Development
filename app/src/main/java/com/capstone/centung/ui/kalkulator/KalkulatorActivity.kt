@@ -55,10 +55,8 @@ class KalkulatorActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Tampilkan ProgressBar
             progressBar.visibility = View.VISIBLE
 
-            // Log untuk debug
             Log.d("API_REQUEST", "Jenis kelamin: $gender, Usia: $usia, Tinggi: $tinggi")
 
             val request = StuntingRequest(
@@ -74,7 +72,6 @@ class KalkulatorActivity : AppCompatActivity() {
                         response: Response<StuntingResponse>
                     ) {
 
-                        // Sembunyikan ProgressBar
                         progressBar.visibility = View.GONE
 
                         if (response.isSuccessful) {

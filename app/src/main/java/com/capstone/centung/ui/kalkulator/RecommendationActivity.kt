@@ -18,13 +18,12 @@ class RecommendationActivity : AppCompatActivity() {
         val buttonBack = findViewById<Button>(R.id.buttonBack)
 
         buttonBack.setOnClickListener {
-            // Pindah ke MainActivity dan arahkan ke HomeFragment
             val intent = Intent(this, MainActivity::class.java).apply {
-                putExtra("navigateTo", "home") // Flag untuk navigasi
+                putExtra("navigateTo", "home")
                 flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
             }
             startActivity(intent)
-            finish() // Tutup RecommendationActivity
+            finish()
         }
     }
 }
