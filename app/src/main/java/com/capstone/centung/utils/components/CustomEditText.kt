@@ -2,6 +2,7 @@ package com.capstone.centung.utils.components
 
 import android.content.Context
 import android.text.InputType
+import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
@@ -61,4 +62,15 @@ class CustomEditText @JvmOverloads constructor(
             binding.editText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
         }
     }
+
+    fun addTextChangedListener(watcher: TextWatcher) {
+        binding.editText.addTextChangedListener(watcher)
+    }
+
+    var error: String?
+        get() = binding.textInputLayout.error?.toString()
+        set(value) {
+            binding.textInputLayout.error = value
+        }
+
 }
