@@ -5,6 +5,21 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+
+            <data android:scheme="mailto" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+
+            <data android:scheme="tel" />
+        </intent>
+
+        <package android:name="com.whatsapp" />
+    </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,6 +30,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Centung"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.edit_profile.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.contact_us.ContactUsActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.DashboardPemantauan.DashboardActivity"
             android:exported="false" />
