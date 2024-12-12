@@ -1,6 +1,7 @@
 package com.capstone.centung.ui.about_app
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.centung.R
 import com.capstone.centung.databinding.ActivityAboutAppBinding

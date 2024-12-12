@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.capstone.centung"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -95,5 +95,5 @@ dependencies {
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.0")
 
     implementation ("com.github.bumptech.glide:glide:4.15.1")
-    kapt ("com.github.bumptech.glide:compiler:4.15.1")
+    kapt("com.github.bumptech.glide:compiler:4.15.1")
 }
