@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
@@ -59,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             app:hintText="Input your email"
-            app:labelText="Email"
+            app:labelText="Name"
             app:layout_constraintTop_toBottomOf="@id/iv_sign_up" />
 
         <com.capstone.centung.utils.components.CustomEditText
@@ -92,7 +93,7 @@
         <TextView
             android:id="@+id/tv_sub_headline"
             style="@style/Body.Light.1"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="30dp"
             android:layout_marginBottom="20dp"
             android:text="Already have an account?"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -109,6 +110,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_sub_headline"
             app:layout_constraintTop_toTopOf="@id/tv_sub_headline" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>

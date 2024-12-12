@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object Injection {
     fun provideRepository(context: Context): UserRepository {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://story-api.dicoding.dev/v1/")
+            .baseUrl("https://my-auth-api-343378515387.asia-southeast2.run.app/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         val apiService = retrofit.create(ApiService::class.java)
