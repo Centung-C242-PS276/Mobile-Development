@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -11,23 +12,53 @@
         android:id="@+id/mToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:title="Tentang Aplikasi"
         app:titleCentered="true"
         app:titleTextAppearance="@style/Headline.Toolbar" />
 
-    <TextView
-        android:id="@+id/tv_desc"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:fontFamily="@font/league_spartan_regular"
-        android:padding="30dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:background="@drawable/about_background"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/mToolbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mToolbar" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="335dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Gambar Anak"
+            android:src="@drawable/app" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="STUNTING APP :"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Centung is an innovative digital solution designed to predict and address the risk of stunting in children. By leveraging key health indicators such as nutritional intake, parental health history, and environmental factors, Centung empowers caregivers and healthcare professionals with real-time insights into a child's growth and development. The application utilizes advanced machine learning algorithms to analyze data and assess stunting risk levels, providing personalized recommendations to prevent and mitigate the condition. Through an intuitive interface, Centung delivers actionable guidance, health education, and progress tracki=ng to ensure timely interventions. By focusing on early detection and prevention, Centung aims to become a vital tool in combating stunting, supporting Indonesia’s efforts to improve child health outcomes and nurture a healthier, brighter future for its next generation."
+                android:textSize="14sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,10 +21,10 @@
 
             <ImageView
                 android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/doctor_image"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:contentDescription="Gambar Dokter" />
+                android:contentDescription="Gambar Dokter"
+                android:src="@drawable/doctor_image" />
 
 
             <LinearLayout
@@ -64,10 +63,10 @@
 
             <ImageView
                 android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/child_image"
+                android:layout_height="162dp"
                 android:layout_marginEnd="8dp"
-                android:contentDescription="Gambar Anak" />
+                android:contentDescription="Gambar Anak"
+                android:src="@drawable/child_image" />
 
 
             <LinearLayout
@@ -107,10 +106,10 @@
 
             <ImageView
                 android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/child_image2"
+                android:layout_height="153dp"
                 android:layout_marginEnd="8dp"
-                android:contentDescription="Gambar Anak" />
+                android:contentDescription="Gambar Anak"
+                android:src="@drawable/child_image2" />
 
 
             <LinearLayout
@@ -148,10 +147,10 @@
 
             <ImageView
                 android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/child_image3"
+                android:layout_height="119dp"
                 android:layout_marginEnd="8dp"
-                android:contentDescription="Gambar Anak" />
+                android:contentDescription="Gambar Anak"
+                android:src="@drawable/child_image3" />
 
             <LinearLayout
                 android:layout_width="0dp"

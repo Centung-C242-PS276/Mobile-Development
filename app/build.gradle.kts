@@ -99,4 +99,7 @@ dependencies {
 
     // Security
     implementation("androidx.security:security-crypto:1.1.0-alpha04")
+
+    implementation ("com.github.chrisbanes:PhotoView:2.3.0")
+
 }
