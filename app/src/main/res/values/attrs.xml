@@ -15,5 +15,6 @@
             <enum name="gone" value="2" />
         </attr>
         <attr name="addTextColor" format="color" />
+        <attr name="addTextUnderline" format="boolean" />
     </declare-styleable>
 </resources>

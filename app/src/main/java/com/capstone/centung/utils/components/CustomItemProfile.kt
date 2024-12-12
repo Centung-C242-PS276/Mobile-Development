@@ -3,6 +3,8 @@ package com.capstone.centung.utils.components
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
+import android.text.SpannableString
+import android.text.style.UnderlineSpan
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
@@ -32,7 +34,6 @@ class CustomItemProfile @JvmOverloads constructor(
                 val text: String? = typedArray.getString(R.styleable.CustomItemProfile_addText)
                 binding.tvAddText.text = text
 
-
                 val textColor = typedArray.getColor(
                     R.styleable.CustomItemProfile_addTextColor,
                     context.getColor(R.color.black)
@@ -48,17 +49,33 @@ class CustomItemProfile @JvmOverloads constructor(
                     2 -> GONE
                     else -> VISIBLE
                 }
+                val isUnderlined =
+                    typedArray.getBoolean(R.styleable.CustomItemProfile_addTextUnderline, false)
+                if (isUnderlined) {
+                    setUnderlinedText(text ?: "")
+                } else {
+                    binding.tvAddText.text = text
+                }
+
             }
     }
+
     fun setDividerVisibility(visibility: Int) {
         binding.divider.visibility = visibility
     }
+
     fun setDrawable(drawable: Drawable?) {
         binding.ivAddImg.setImageDrawable(drawable)
     }
 
     fun setText(text: String?) {
         binding.tvAddText.text = text
+    }
+
+    fun setUnderlinedText(text: String?) {
+        val spannableString = SpannableString(text)
+        spannableString.setSpan(UnderlineSpan(), 0, spannableString.length, 0)
+        binding.tvAddText.text = spannableString
     }
 
     fun setOnRootClickListener(listener: OnClickListener) {
