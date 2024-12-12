@@ -1,5 +1,6 @@
 package com.capstone.centung.ui.profile
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -28,7 +29,6 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupButtonActions()
-
     }
 
     private fun setupButtonActions() {
@@ -39,15 +39,25 @@ class ProfileFragment : Fragment() {
             btnAboutApp.setOnClickListener {
                 startActivity(Intent(requireActivity(), AboutAppActivity::class.java))
             }
-
             btnContactUs.setOnClickListener {
                 startActivity(Intent(requireActivity(), ContactUsActivity::class.java))
             }
-
             btnLogout.setOnClickListener {
-                startActivity(Intent(requireActivity(), LoginActivity::class.java))
-                requireActivity().finish()
+                logoutUser()
             }
         }
+    }
+
+    private fun logoutUser() {
+        val sharedPreferences =
+            requireActivity().getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.clear()
+        editor.apply()
+
+
+        val intent = Intent(requireActivity(), LoginActivity::class.java)
+        startActivity(intent)
+        requireActivity().finish()
     }
 }

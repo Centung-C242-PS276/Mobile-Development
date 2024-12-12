@@ -1,5 +1,6 @@
 package com.capstone.centung.ui.login
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -43,6 +44,9 @@ class LoginActivity : AppCompatActivity() {
                 is Result.Success -> {
                     progressBar.visibility = View.GONE
                     loginButton.isEnabled = true
+
+                    saveLoginState(true)
+
                     Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
@@ -72,5 +76,13 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    private fun saveLoginState(isLoggedIn: Boolean) {
+        val sharedPreferences = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putBoolean("isLoggedIn", isLoggedIn)
+        editor.apply()
+    }
 }
+
 
