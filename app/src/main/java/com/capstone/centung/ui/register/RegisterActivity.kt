@@ -4,7 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -27,29 +29,31 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-
         val nameField = findViewById<CustomEditText>(R.id.edt_name)
         val emailField = findViewById<CustomEditText>(R.id.edt_email)
         val passwordField = findViewById<CustomEditText>(R.id.edt_password)
         val registerButton = findViewById<Button>(R.id.btn_register)
         val loginTextView = findViewById<TextView>(R.id.tv_btn_login)
-
+        val progressBar = findViewById<ProgressBar>(R.id.progress_bar)
 
         viewModel.registerResult.observe(this) { result ->
             when (result) {
                 is Result.Loading -> {
+                    progressBar.visibility = View.VISIBLE
                     registerButton.isEnabled = false
                 }
                 is Result.Success -> {
+                    progressBar.visibility = View.GONE
+                    registerButton.isEnabled = true
                     Toast.makeText(this, result.data.message ?: "Register Berhasil", Toast.LENGTH_SHORT).show()
                     finish()
                 }
                 is Result.Error -> {
-
+                    progressBar.visibility = View.GONE
+                    registerButton.isEnabled = true
                     Toast.makeText(this, "Error: ${result.exception.message}", Toast.LENGTH_SHORT).show()
                 }
             }
-            registerButton.isEnabled = true
         }
 
         passwordField.addTextChangedListener(object : TextWatcher {
@@ -68,10 +72,9 @@ class RegisterActivity : AppCompatActivity() {
             val email = emailField.inputText.trim()
             val password = passwordField.inputText.trim()
 
-
             if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Semua field harus diisi", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
+                        return@setOnClickListener
             }
 
             if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
