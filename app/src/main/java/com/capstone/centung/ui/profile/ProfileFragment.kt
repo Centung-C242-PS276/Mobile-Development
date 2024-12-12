@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.capstone.centung.databinding.FragmentProfileBinding
 import com.capstone.centung.ui.about_app.AboutAppActivity
+import com.capstone.centung.ui.contact_us.ContactUsActivity
+import com.capstone.centung.ui.edit_profile.EditProfileActivity
 import com.capstone.centung.ui.login.LoginActivity
 
 class ProfileFragment : Fragment() {
@@ -31,17 +33,15 @@ class ProfileFragment : Fragment() {
 
     private fun setupButtonActions() {
         binding.apply {
-
+            btnEditProfile.setOnClickListener {
+                startActivity(Intent(requireActivity(), EditProfileActivity::class.java))
+            }
             btnAboutApp.setOnClickListener {
                 startActivity(Intent(requireActivity(), AboutAppActivity::class.java))
             }
 
-            btnRatingUs.setOnClickListener {
-
-            }
-
             btnContactUs.setOnClickListener {
-
+                startActivity(Intent(requireActivity(), ContactUsActivity::class.java))
             }
 
             btnLogout.setOnClickListener {

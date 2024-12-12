@@ -76,20 +76,12 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <com.capstone.centung.utils.components.CustomItemProfile
-                    android:id="@+id/btn_rating_us"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:addImg="@drawable/ic_star_rating"
-                    app:addText="Rating Us"
-                    app:layout_constraintTop_toBottomOf="@id/btn_about_app" />
-
-                <com.capstone.centung.utils.components.CustomItemProfile
                     android:id="@+id/btn_contact_us"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:addImg="@drawable/ic_contact"
-                    app:addText="Contact Us"
-                    app:layout_constraintTop_toBottomOf="@id/btn_rating_us" />
+                    app:addText="Contact BkkBN"
+                    app:layout_constraintTop_toBottomOf="@id/btn_about_app" />
 
                 <com.capstone.centung.utils.components.CustomItemProfile
                     android:id="@+id/btn_logout"
