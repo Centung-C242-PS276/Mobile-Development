@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.contact_us.ContactUsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Kontak BKKBN"
+        app:titleCentered="true"
+        app:titleTextAppearance="@style/Headline.Toolbar" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_menu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        app:cardBackgroundColor="#F3F3F3"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/mToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.Card.TopRounded"
+        app:strokeColor="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.capstone.centung.utils.components.CustomItemProfile
+                android:id="@+id/btn_whatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:addImg="@drawable/ic_whatsapp"
+                app:addText="+62 821-1205-3249"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.capstone.centung.utils.components.CustomItemProfile
+                android:id="@+id/btn_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:addImg="@drawable/ic_phone"
+                app:addText="021-8000685"
+                app:layout_constraintTop_toBottomOf="@id/btn_whatsapp" />
+
+            <com.capstone.centung.utils.components.CustomItemProfile
+                android:id="@+id/btn_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:addImg="@drawable/ic_email"
+                app:addText="ppid.pusat@bkkbn.go.id"
+                app:addTextUnderline="true"
+                app:dividerVisibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/btn_phone" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
